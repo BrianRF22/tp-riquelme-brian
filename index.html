@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Personajes · Trabajo Práctico</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Explorador de Personajes</h1>
+      <p>Trabajo Práctico · Variante A (Personajes) · Brian Riquelme</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="buscador-card">
+      <form id="form-busqueda" class="form-busqueda">
+        <div class="campo">
+          <label for="input-nombre">Nombre del personaje</label>
+          <input type="text" id="input-nombre" name="name" placeholder="Ej. Rick, Morty, Summer...">
+        </div>
+
+        <div class="campo">
+          <label for="select-estado">Estado (status)</label>
+          <select id="select-estado" name="status">
+            <option value="">Todos los estados</option>
+            <option value="alive">Vivo (Alive)</option>
+            <option value="dead">Muerto (Dead)</option>
+            <option value="unknown">Desconocido (Unknown)</option>
+          </select>
+        </div>
+
+        <div class="acciones">
+          <button type="submit" id="btn-buscar" class="btn btn-primary">Buscar</button>
+          <button type="button" id="btn-limpiar" class="btn btn-secondary">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="estado-mensaje" class="estado-mensaje oculto" aria-live="polite"></section>
+
+    <section aria-label="Resultados de búsqueda">
+      <div id="grilla-resultados" class="grilla-tarjetas"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Fundamentos de Desarrollo Web · Brian Riquelme (C.I. 5988180) · Datos provistos por Rick and Morty API · <strong>Versión <span id="version">1.0</span></strong></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

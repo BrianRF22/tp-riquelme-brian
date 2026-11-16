@@ -1,0 +1,11 @@
+# Dependencias y compilaciones
+node_modules/
+dist/
+
+# Variables de entorno
+.env
+
+# Archivos del sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
